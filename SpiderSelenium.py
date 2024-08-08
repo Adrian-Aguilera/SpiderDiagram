@@ -7,7 +7,7 @@ driver = webdriver.Chrome()
 try:
     driver.get('https://www.superselectos.com/products?keyword=carnes')
 
-    time.sleep(3)
+    time.sleep(6)
 
     # Capturar y mostrar la URL actual
     current_url = driver.current_url
