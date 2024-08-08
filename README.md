@@ -10,7 +10,7 @@ Clonar el repositorio
 Go to the project directory 
 
 ```bash
-  cd /EdulA-Engine
+  cd /SpiderDiagram
 ```
 
 
