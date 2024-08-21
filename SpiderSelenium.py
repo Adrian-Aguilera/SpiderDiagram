@@ -5,22 +5,26 @@ import time
 driver = webdriver.Chrome()
 
 try:
-    driver.get('https://www.superselectos.com/products?keyword=carnes')
+    iniurl = 'https://www.superselectos.com/products?keyword=carnes'
+    i = 0
+    while True:
+        driver.get(iniurl if i == 0 else current_url)
 
-    time.sleep(6)
+        time.sleep(6)
 
-    # Capturar y mostrar la URL actual
-    current_url = driver.current_url
-    print(f'URL actual: {current_url}')
+        # Capturar y mostrar la URL actual
+        current_url = driver.current_url
+        print(f'URL actual: {current_url}')
 
-    selectElements = driver.find_element(By.LINK_TEXT, value='Siguiente')
-    selectElements.click()
+        selectElements = driver.find_element(By.LINK_TEXT, value='Siguiente')
+        selectElements.click()
 
-    time.sleep(3)
+        time.sleep(3)
 
-    #actualiza la url
-    current_url = driver.current_url
-    print(f'URL actual después de navegar: {current_url}')
+        #actualiza la url
+        current_url = driver.current_url
+        print(f'URL actual después de navegar: {current_url}')
+        i += 1
 
 finally:
     # Cerrar el navegador
